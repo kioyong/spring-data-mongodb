@@ -28,7 +28,6 @@ env:
   global:
     - PROFILE=ci
 
-
 sudo: false
 
 cache:
@@ -36,3 +35,7 @@ cache:
     - $HOME/.m2
     - downloads
 
+install: true
+
+script:
+  - "./mvnw clean dependency:list test -Pci,java11 -Dsort -U"
