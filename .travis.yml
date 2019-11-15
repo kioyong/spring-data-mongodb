@@ -38,4 +38,4 @@ cache:
 install: true
 
 script:
-  - "./mvnw clean dependency:list test -Pci,java11 -Dsort -U"
+  - "./mvnw clean dependency:list test -Pjava11 -Dsort -U"
