@@ -1,8 +1,5 @@
 language: java
 
-jdk:
-  - oraclejdk8
-
 before_install:
   - mkdir -p downloads
   - mkdir -p var/db var/log
@@ -23,11 +20,6 @@ env:
   global:
     - PROFILE=ci
 
-addons:
-  apt:
-    packages:
-      - oracle-java8-installer
-
 sudo: false
 
 cache:
@@ -35,4 +27,3 @@ cache:
     - $HOME/.m2
     - downloads
 
-script: "mvn clean dependency:list test -P${PROFILE} -Dsort"
